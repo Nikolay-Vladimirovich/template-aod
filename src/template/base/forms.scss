@@ -4,7 +4,7 @@
 	color: var(--btn-submit-font-color);
 	font-weight: 300;
 	// Размер шрифта
-	@include a-fz($btn-submit-fz, $btn-submit-fz-min);
+	@include a-fz(24, 21);
 	text-transform: uppercase;
 	border: none;
 	padding: rem(18.5);
@@ -15,7 +15,7 @@
 	border: 1px solid var(--btn-discover-border-color);
 	font-weight: bold;
 	// Размер шрифта
-	@include a-fz($btn-discover-fz, $btn-discover-fz-min);
+	@include a-fz(14, 12);
 	text-transform: uppercase;
 	padding: rem(14) rem(19) rem(15) rem(22);
 	letter-spacing: 0.2em;
@@ -38,11 +38,11 @@
 	color: var(--fld-font-color);
 	font-style: italic;
 	// Размер шрифта
-	@include a-fz($fld-fz, $fld-fz-min);
+	@include a-fz(20, 17);
 	padding: rem(19.5) rem(24);
 	font-weight: 300;
 	&::placeholder {
-		color: var(--fld-placeholder-color);;
+		color: var(--fld-placeholder-color);
 		font-weight: 300;
 	}
 	&:focus-visible {

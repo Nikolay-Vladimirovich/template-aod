@@ -18,12 +18,12 @@ h2 {
 	text-transform: uppercase;
 	font-weight: bold;
 	color: var(--h2-font-color);
-	@include a-fz($h2-fz, $h2-fz-min);
+	@include a-fz(18, 16);
 }
 
 p {
 	color: var(--main-font-color);
-	@include a-fz($p-fz, $p-fz-min);
+	@include a-fz(16, 14);
 }
 
 a {
@@ -50,7 +50,6 @@ a:focus-visible {
 	outline: 2px solid var(--links-outline-color);
 }
 [tabindex="0"]:focus-visible {
-	
 }
 /* -------------------- Иконки : начало ------------	-------- */
 [class*="icon--"],
