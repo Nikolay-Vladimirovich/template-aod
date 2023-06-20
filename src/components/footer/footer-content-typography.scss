@@ -1,0 +1,52 @@
+/* -------------------- footer - контент - типография : начало -------------------- */
+.footer {
+	.contacts {
+		font-size: rem(13.5);
+		@include bp(lg) {
+		}
+		li {
+			line-height: 1.25;
+		}
+		b {
+			font-size: rem(16);
+		}
+		i {
+			letter-spacing: 0.01em;
+		}
+		a {
+			letter-spacing: 0.02em;
+		}
+	}
+	.socials {
+		@include bp(lg) {
+			padding-right: 1px;
+			padding-top: 14px;
+		}
+		ul {
+			li {
+				padding: 0 8px 0 7px;
+			}
+		}
+		a {
+			display: inline-block;
+			transition: opacity var(--simple-transition-duration, .25s);
+			&:hover {
+				opacity: 0.8;
+			}
+			&:active {
+				opacity: 0.6;
+			}
+		}
+	}
+	.copyright {
+		font-size: rem(13.9);
+		em {
+			letter-spacing: -0.005em;
+		}
+		a {
+			margin-top: 3px;
+			margin-left: 8px;
+		}
+	}
+}
+/* -------------------- footer - контент - типография : конец -------------------- */

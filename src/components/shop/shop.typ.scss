@@ -1,0 +1,73 @@
+/* -------------------- shop - типографика : начало -------------------- */
+.shop {
+	.discover {
+		background-color: var(--shop-discover-bg-color);
+	}
+	.shop__item {
+		position: relative;
+
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+
+		figcaption {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+			opacity: 0;
+			background: var(--shop-overlay-bg-color);
+			transition: opacity var(--simple-transition-duration);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			
+		
+			a {
+				top: 0;
+				position: relative;
+				padding-top: 5px;
+				color: #fff;
+				text-transform: uppercase;
+				font-size: rem(13.9);
+				font-weight: bold;
+				letter-spacing: 0.2em;
+				transition: opacity var(--simple-transition-duration);
+
+				&:hover,
+				&:focus-visible {
+					text-decoration: none;
+					opacity: 0.8;
+				}
+				&:before {
+					content: "";
+					display: block;
+					margin: 0 auto;
+					background-image: url("@assets/img/svgsprites/svgsprites.svg#shop-rollover");
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+					background-size: cover;
+					width: 51px;
+					height: 30px;
+					margin-bottom: 9px;
+				}
+			}
+			
+		}
+		&:hover figcaption {
+			opacity: 0.8;
+		}
+		figcaption:focus-visible,
+		&:focus-within figcaption {
+			opacity: 0.8;
+		}
+		
+	}
+}
+/* -------------------- shop - типографика : конец -------------------- */

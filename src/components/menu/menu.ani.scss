@@ -1,0 +1,51 @@
+/* -------------------- menu - анимация : начало -------------------- */
+.menu {
+	/* .logo {
+		transition: filter, transform 1s, 0.5s ease;
+		&:hover {
+			transform: rotateZ(360deg);
+			filter: contrast(150%);
+		}
+	} */
+	/* 
+	.logo {
+		transition: filter, transform 1s, var(--simple-transition-duration);
+		&:hover {
+			transform: scale(110%);
+			filter: contrast(110%);
+		}
+	}
+	*/
+	& > a {
+		& > span {
+			transition-property: text-shadow, color, padding-bottom;
+			transition-duration: var(--simple-transition-duration .25s);
+			transition-delay: 0.1s;
+			position: relative;
+			&:after {
+				display: block; // !!!
+				transition-property: border-color, width;
+				transition-duration: var(--simple-transition-duration, .25s);
+				transition-delay: 0.1s;
+				width: 0;
+			}
+			&:hover {
+				// padding-bottom: rem(18);
+
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+		&.is-clicked,
+		&.is-active,
+		&:focus-visible {
+			span {
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+/* -------------------- menu - типографика : конец -------------------- */

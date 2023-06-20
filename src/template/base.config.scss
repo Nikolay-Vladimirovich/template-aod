@@ -1,0 +1,23 @@
+$menu-logo-order: 2;
+
+$h2-fz: 18;
+$h2-fz-min: 16;
+
+$p-fz: 16;
+$p-fz-min: 14;
+
+$fld-fz: 20;
+$fld-fz-min: 17;
+
+$btn-submit-fz: 24;
+$btn-submit-fz-min: 21;
+
+$btn-discover-fz: 14;
+$btn-discover-fz-min: 12;
+
+:root {
+	// --menu-logo-order: 2; // Позиция логотипа в меню
+	--font-family: Lato;
+	--burger-animation-duration: 0.3s;
+	--simple-transition-duration: 0.3s;
+}

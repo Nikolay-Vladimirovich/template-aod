@@ -1,0 +1,59 @@
+/* -------------------- footer - позиционирование основных блоков : начало -------------------- */
+.footer {
+	background-color: var(--footer-bg-color, #f7f7f7);
+	display: flex;
+	// Центрируем по обеим осям содержимое
+	justify-content: center;
+	align-items: center;
+	min-height: 240px;
+
+	.content-container {
+		@include content-paddings;
+	}
+	&__layout {
+		@include a-padd-h(10);
+		
+
+		@include bp(lg) {
+			
+		}
+
+		display: grid;
+		width: 100%;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+			"copyright"
+			"socials"
+			"contacts";
+
+		@include bp(sm) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto auto;
+			grid-template-areas:
+				"copyright socials"
+				"contacts socials";
+		}
+
+		@include bp(md) {
+			grid-template-columns: 1.5fr 1fr 1.5fr;
+			grid-template-rows: 1fr;
+			grid-template-areas: "contacts socials copyright";
+		}
+		@include bp(lg) {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+			grid-template-areas: "contacts socials copyright";
+		}
+		.contacts {
+			grid-area: contacts;
+		}
+		.socials {
+			grid-area: socials;
+		}
+		.copyright {
+			grid-area: copyright;
+		}
+	}
+}
+/* -------------------- footer - позиционирование основных блоков : конец -------------------- */

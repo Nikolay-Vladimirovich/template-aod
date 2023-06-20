@@ -1,0 +1,70 @@
+/* -------------------- portfolio - расположение : начало -------------------- */
+.portfolio {
+}
+.work {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 2fr;
+	grid-template-areas:
+		"picture-area"
+		"info-area";
+
+	margin: 0 auto;
+
+	&:is(.work--tripled) {
+		grid-template-rows: 200px 200px 1fr;
+		grid-template-areas:
+			"picture-area"
+			"picture-area-2"
+			"info-area";
+	}
+
+	@include bp(sm) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: "picture-area info-area";
+
+		&:is(.work--reverse) {
+			grid-template-areas: "info-area picture-area";
+		}
+
+		&:is(.work--tripled) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-template-areas:
+				"picture-area info-area"
+				"picture-area-2 info-area";
+		}
+	}
+
+	@include bp(xl) {
+		grid-template-columns: 2fr minmax($work-thumb-maxwidth-px, 1fr);
+		grid-template-rows: minmax(600px, 1fr);
+
+		&:is(.work--reverse) {
+			grid-template-columns: minmax($work-thumb-maxwidth-px, 1fr) 2fr;
+		}
+		&:is(.work--tripled) {
+			grid-template-columns: 1fr minmax($work-thumb-maxwidth-px, 1fr) 1fr;
+			grid-template-rows: minmax(600px, 1fr);
+			grid-template-areas: "picture-area info-area picture-area-2";
+		}
+	}
+	// ----- work -- позиционирование блока с большим изображением : начало -----
+	&__picture-area {
+		grid-area: picture-area;
+		&:is(:nth-child(2)) {
+			// ! Если существует 2ой такой блок внутри блока .work, то присваиваем ему:
+			grid-area: picture-area-2;
+		}
+	}
+	// ----- work -- позиционирование блока с большим изображением : конец -----
+	// ----- work -- позиционирование блока c информацией : начало -----
+	&__info-area {
+		grid-area: info-area;
+		display: flex;
+		flex-direction: column;
+	}
+	// ----- work -- позиционирование блока c информацией : начало -----
+}
+/* -------------------- portfolio - расположение : конец -------------------- */

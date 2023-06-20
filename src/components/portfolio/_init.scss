@@ -1,0 +1,14 @@
+/* ============================== portfolio : начало ============================== */
+$work-thumb-maxwidth: 533;
+$work-image-maxwidth: 1067;
+$work-thumb-maxwidth-px: $work-thumb-maxwidth + px;
+$work-image-maxwidth-px: $work-image-maxwidth + px;
+
+@import "portfolio.typ";
+@import "portfolio.dec";
+@import "portfolio.lay";
+@import "portfolio.info.lay";
+
+@import "portfolio.pix";
+
+/* ============================== portfolio : конец ============================== */

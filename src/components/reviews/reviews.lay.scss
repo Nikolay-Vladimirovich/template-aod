@@ -1,0 +1,36 @@
+/* -------------------- reviews - позиционирование : начало -------------------- */
+.reviews {
+	@include component-container;
+	@include a-padd-t(48, 0);
+	.content-container {
+		@include content-paddings;
+	}
+	&__layout {
+		display: flex;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		text-align: center;
+		@include bp($pixelperfect-start-bp) {
+			padding-left: 36px;
+		}
+		.icon-box {
+			@include a-padd-b(24);
+			@include a-marg-r(36, 0, inside);
+			@include bp($pixelperfect-start-bp) {
+				margin-right: rem(36);
+			}
+		}
+		h2 {
+			@include a-padd-b(12);
+			@include a-marg-r(32, 0, inside);
+			@include bp($pixelperfect-start-bp) {
+				margin-right: rem(32);
+			}
+		}
+	}
+}
+/* -------------------- reviews - позиционирование : конец -------------------- */

@@ -1,0 +1,57 @@
+/* ============================== Элементы форм : начало ============================== */
+.btn--submit {
+	background-color: var(--btn-submit-bg-color);
+	color: var(--btn-submit-font-color);
+	font-weight: 300;
+	// Размер шрифта
+	@include a-fz($btn-submit-fz, $btn-submit-fz-min);
+	text-transform: uppercase;
+	border: none;
+	padding: rem(18.5);
+}
+.btn--discover {
+	background-color: var(--btn-discover-bg-color);
+	color: var(--btn-discover-font-color);
+	border: 1px solid var(--btn-discover-border-color);
+	font-weight: bold;
+	// Размер шрифта
+	@include a-fz($btn-discover-fz, $btn-discover-fz-min);
+	text-transform: uppercase;
+	padding: rem(14) rem(19) rem(15) rem(22);
+	letter-spacing: 0.2em;
+	text-align: center;
+}
+
+[class*="btn--"] {
+	transition: opacity var(--simple-transition-duration);
+	&:hover {
+		opacity: 0.8;
+	}
+	&:active {
+		opacity: 0.6;
+	}
+}
+
+.fld {
+	border: 1px solid var(--fld-border-color);
+	background: var(--fld-bg-color);
+	color: var(--fld-font-color);
+	font-style: italic;
+	// Размер шрифта
+	@include a-fz($fld-fz, $fld-fz-min);
+	padding: rem(19.5) rem(24);
+	font-weight: 300;
+	&::placeholder {
+		color: var(--fld-placeholder-color);;
+		font-weight: 300;
+	}
+	&:focus-visible {
+		border: 1px solid var(--outline-color);
+	}
+}
+
+input.err {
+	outline: 1px solid rgb(202, 45, 45);
+	color: rgb(139, 31, 31);
+}
+/* ============================== Элементы форм : конец ============================== */

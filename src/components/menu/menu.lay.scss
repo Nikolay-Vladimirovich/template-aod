@@ -1,0 +1,110 @@
+/* ---------- menu - позиционирование : начало ---------- */
+.menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding-top: rem(50);
+	padding-bottom: rem(50);
+
+	@include bp($menu-adaptive-bp-1) {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		height: auto;
+		margin-bottom: 0;
+
+		padding-top: rem(0);
+		padding-bottom: rem(0);
+
+		@include content-paddings;
+		// @include content-margins-r;
+		margin-right: 14px;
+	}
+	@include bp($menu-adaptive-bp-2) {
+		padding-top: rem(0);
+		padding-left: 0;
+		padding-right: 0;
+		padding: 0;
+		margin: 0;
+
+	}
+
+	& > a {
+		flex-basis: 100%;
+		flex-shrink: 1;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+
+		@include bp($menu-adaptive-bp-1) {
+			flex-direction: row;
+			justify-content: space-around;
+
+			flex-basis: auto;
+			flex-shrink: 0;
+			flex-grow: 1;
+
+			&:not(:last-of-type) {
+				flex-grow: 1;
+			}
+			&:not(:last-of-type) span {
+				text-align: left;
+			}
+			&:not(:last-of-type):after,
+			&.menu__link:nth-of-type(#{$menu-logo-order}) + .menu__link:before {
+				flex-basis: 100%;
+				flex-shrink: 1;
+				flex-grow: 1;
+			}
+			&.menu__link:nth-of-type(#{$menu-logo-order}) + .menu__link:after {
+				display: none;
+			}
+			&.menu__link:nth-of-type(#{$menu-logo-order}):after {
+				@include bp($menu-adaptive-bp-1) {
+					flex-grow: 1;
+				}
+			}
+			&.menu__link:nth-of-type(#{$menu-logo-order}) ~ .menu__link:before {
+				@include bp($menu-adaptive-bp-1) {
+					flex-grow: 1;
+				}
+			}
+			&.menu__link:nth-of-type(#{$menu-logo-order}) + .menu__link {
+				flex-grow: 1;
+			}
+			&.menu__link:nth-of-type(#{$menu-logo-order}) ~ .menu__link {
+				flex-grow: 1;
+			}
+		}
+	}
+	@include bp($menu-adaptive-bp-2) {
+		max-width: 618px;
+	}
+	.logo {
+		padding-top: rem(36);
+		padding-bottom: rem(24);
+		@include bp($menu-adaptive-bp-1) {
+			flex-grow: 0;
+			flex-shrink: 0;
+			padding: rem(0);
+			margin-left: rem(4);
+			margin-right: rem(0);
+		}
+		@include bp($menu-adaptive-bp-2) {
+		}
+	}
+	@include bp($menu-adaptive-bp-1) {
+		@for $i from 1 through $menu-items-amount {
+			& > a:nth-of-type(#{$i}) ~ .logo {
+				order: math.div($i, 2);
+			}
+		}
+	}
+}
+/* -------------------- menu - позиционирование : конец -------------------- */

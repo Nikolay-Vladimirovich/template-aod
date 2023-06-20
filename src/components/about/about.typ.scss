@@ -1,0 +1,15 @@
+/* -------------------- about - типографика : начало -------------------- */
+.about {
+	background-color: var(--content-bg-color-tell, #f7f7f7);
+	h2 {
+		letter-spacing: 0.195em;
+		text-align: center;
+	}
+	p {
+		line-height: 1.9;
+		letter-spacing: -0.005em;
+		text-align: center;
+		@include a-fz(18, 14);
+	}
+}
+/* -------------------- about - типографика : конец -------------------- */

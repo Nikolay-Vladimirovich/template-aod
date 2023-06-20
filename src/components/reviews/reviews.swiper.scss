@@ -1,0 +1,58 @@
+/* -------------------- reviews - свайпер : начало -------------------- */
+.swiper {
+	display: flex;
+	flex-direction: column;
+	&-slide {
+	}
+	&-pagination {
+	}
+	&-pagination-bullet {
+		--swiper-pagination-bullet-inactive-color: transparent;
+		--swiper-pagination-bullet-inactive-opacity: 1;
+		/* --swiper-pagination-bullet-size: 15px;
+		--swiper-pagination-bullet-horizontal-gap: 8px;
+		@include bp(md) {
+			--swiper-pagination-bullet-size: 13px;
+			--swiper-pagination-bullet-horizontal-gap: 6px;
+		}
+		@include bp(lg) {
+			--swiper-pagination-bullet-size: 11px;
+			--swiper-pagination-bullet-horizontal-gap: 4.5px;
+		} */
+		--swiper-pagination-bullet-size: 11px;
+		--swiper-pagination-bullet-horizontal-gap: 4.5px;
+		border: 1px solid var(--swiper-pagination-color);
+		transition: var(--simple-transition-duration);
+
+		&-active {
+			// --swiper-pagination-color: #a9aeb1;
+		}
+		@include bp(lg) {
+			&:hover {
+				background-color: var(--swiper-pagination-color);
+			}
+		}
+	}
+}
+.reviews {
+	.swiper {
+		// padding-bottom: 106px; // Отступ от содержимого слайда до пагинации
+		@include a-padd-b(106);
+
+		display: flex;
+		align-items: stretch;
+		justify-content: stretch;
+		&-wrapper {
+			align-items: center;
+		}
+		&-slide {
+			height: auto;
+		}
+		&-pagination {
+			@include bp($pixelperfect-start-bp) {
+				padding-right: 2px;
+			}
+		}
+	}
+}
+/* -------------------- reviews свайпер : конец -------------------- */

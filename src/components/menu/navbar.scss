@@ -1,0 +1,66 @@
+/* ---------- navbar : начало ---------- */
+body.is-locked {
+	overflow: hidden;
+	@include bp($menu-adaptive-bp-1) {
+		overflow: auto;
+	}
+}
+.navbar {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	pointer-events: none; // ! Важно для анимаций !
+	&.is-expanded {
+		pointer-events: all; // ! Важно для анимаций !
+	}
+	@include bp($menu-adaptive-bp-2) {
+		pointer-events: all;
+	}
+	.nav-wrap {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: 100vh;
+		transition-duration: var(--simple-transition-duration);
+		transition-property: transform, opacity;
+		transform: translateY(-100%);
+		opacity: 0;
+
+		@include bp($menu-adaptive-bp-1) {
+			height: auto;
+		}
+		@include bp($menu-adaptive-bp-2) {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+	&.is-expanded .nav-wrap {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	.ctrls-wrap {
+		pointer-events: all; // ! Важно для анимации !
+		position: absolute;
+		z-index: 2;
+		right: 0;
+		top: 0;
+		min-width: 40px;
+		min-height: 40px;
+		height: 100%;
+		display: flex;
+		align-items: flex-start;
+		z-index: 200;
+		@include ctrls-paddings-t;
+		@include ctrls-paddings-r;
+		transition: padding, top, height, min-height var(--simple-transition-duration);
+		@include bp($menu-adaptive-bp-1) {}
+		@include bp($menu-adaptive-bp-2) {
+			display: none;
+		}
+	}
+}
+
+/* ---------- navbar : конец ---------- */

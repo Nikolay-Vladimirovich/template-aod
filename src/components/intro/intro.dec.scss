@@ -1,0 +1,47 @@
+/* -------------------- intro - декоративная обертка : начало -------------------- */
+.intro {
+	/* display: grid;
+	grid-template-columns: 1fr minmax(0, 1600px) 1fr;
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: relative;
+		z-index: 2;
+	}
+	&:before {
+		background: url("@assets/img/intro-bg-l-outside.jpg") repeat-x 100% 50% / 640px 100%;
+	}
+	&:after {
+		background: url("@assets/img/intro-bg-r-outside.jpg") repeat-x 0 50% / 640px 100%;
+	} */
+
+	&-decor {
+		position: relative;
+		height: 100%;
+		
+		display: grid;
+		grid-template-columns: 1fr minmax(0, 960px) 1fr;
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			position: relative;
+			z-index: 1;
+		}
+		&:before {
+			background: url("@assets/img/intro-bg-l-outside.jpg") repeat-x 100% 50% / 640px 100%;
+		}
+		&:after {
+			background: url("@assets/img/intro-bg-r-outside.jpg") repeat-x 0 50% / 640px 100%;
+		}
+		&__helper {
+			// background: url("@assets/img/intro-bg-c.jpg") no-repeat 50% 50% / 910px 100%;
+		}
+
+		img {
+			
+		}
+	}
+}
+/* -------------------- intro - декоративная обертка : конец -------------------- */

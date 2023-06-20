@@ -1,0 +1,141 @@
+/* ============================== Типографика : начало ============================== */
+body {
+	color: var(--main-font-color);
+	font-family: var(--font-family), sans-serif;
+	font-size: 1rem;
+	line-height: 1.2;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.5;
+	color: var(--headings-font-color);
+}
+h2 {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: var(--h2-font-color);
+	@include a-fz($h2-fz, $h2-fz-min);
+}
+
+p {
+	color: var(--main-font-color);
+	@include a-fz($p-fz, $p-fz-min);
+}
+
+a {
+	color: var(--links-font-color);
+	&:hover {
+		text-decoration: underline;
+	}
+}
+button {
+	background-color: inherit;
+}
+input,
+select {
+	appearance: none;
+	&:focus {
+		outline: none;
+	}
+}
+
+:focus-visible {
+	outline: 2px solid var(--outline-color);
+}
+a:focus-visible {
+	outline: 2px solid var(--links-outline-color);
+}
+[tabindex="0"]:focus-visible {
+	
+}
+/* -------------------- Иконки : начало ------------	-------- */
+[class*="icon--"],
+.icon {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	// object-fit: cover;
+	// border: 1px solid #000;
+}
+/* ----- Иконки в портфолио : начало ----- */
+.icon--about-heading {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#about-heading");
+	width: rem(52);
+	// height: 43px;
+	aspect-ratio: 52/43;
+}
+.icon--portfolio-heading-1 {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#portfolio-heading_1");
+	width: rem(41);
+	// height: 30px;
+	aspect-ratio: 41/30;
+}
+.icon--portfolio-heading-2 {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#portfolio-heading_2");
+	width: rem(32);
+	// height: 32px;
+	aspect-ratio: 32/32;
+}
+.icon--portfolio-heading-3 {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#portfolio-heading_3");
+	width: rem(23);
+	// height: 41px;
+	aspect-ratio: 23/41;
+}
+
+.icon--portfolio-company-1 {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#portfolio-company_1");
+	width: rem(113);
+	// height: 118px;
+	aspect-ratio: 113/118;
+}
+.icon--portfolio-company-2 {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#portfolio-company_2");
+	width: rem(177);
+	// height: 152px;
+	aspect-ratio: 177/152;
+}
+.icon--portfolio-company-3 {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#portfolio-company_3");
+	width: rem(208);
+	// height: 67px;
+	aspect-ratio: 208/67;
+}
+/* ----- Иконки в портфолио : конец ----- */
+/* ----- Иконки в магазине : начало ----- */
+.icon--shop-rollover {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#shop-rollover");
+	width: rem(51);
+	// height: 30px;
+	aspect-ratio: 51/30;
+}
+/* ----- Иконки в магазине : конец ----- */
+/* ----- Иконки социальных сетей : начало ----- */
+.icon--socials-twitter {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#socials-twitter");
+	width: rem(42);
+	// height: 38px
+	aspect-ratio: 42/38;
+}
+[class*="icon--socials-circle-"] {
+	width: rem(44);
+	// height: 43px;
+	aspect-ratio: 44/43;
+}
+.icon--socials-circle-twitter {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#socials-circle-twitter");
+}
+.icon--socials-circle-facebook {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#socials-circle-facebook");
+}
+.icon--socials-circle-pinterest {
+	background-image: url("@assets/img/svgsprites/svgsprites.svg#socials-circle-pinterest");
+}
+/* Иконки социальных сетей : конец */
+/* -------------------- Иконки : конец -------------------- */
+/* ============================== Типографика : конец ============================== */

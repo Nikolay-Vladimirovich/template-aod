@@ -1,0 +1,41 @@
+/* ----- work -- позиционирование КОНТЕНТА ВНУТРИ блока с информацией : начало ----- */
+.work__content {
+	// Paddins 
+	@include content-paddings;
+	@include bp(xl) {
+		@include a-padd-h(68);
+	}
+
+	display: flex;
+	flex-direction: column; // В колонку
+	align-items: center;
+	justify-content: center; // Вертикально по ценру
+	// padding-top: 58px;
+
+	@include bp(md) {
+		// flex: 0 1 100%;
+		// Растягиваем текущий блок на всю СВОБОДНУЮ высоту
+		flex-shrink: 0;
+		flex-grow: 1;
+		flex-basis: auto;
+		// justify-self: stretch;
+	}
+	.icon-box {
+		@include a-padd-v(0, 16);
+	}
+	.title {
+		@include a-padd-v(0, 10);
+	}
+	p {
+		@include a-padd-v(0, 10);
+	}
+	&:after { // Разделитель под контентом
+		@include a-marg-v(23, 0);
+	}
+}
+.work__thumb {
+	img {
+		max-width: 100%;
+	}
+}
+/* ----- work -- позиционирование КОНТЕНТА ВНУТРИ блока с информацией : конец ----- */ 

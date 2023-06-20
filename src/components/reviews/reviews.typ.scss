@@ -1,0 +1,37 @@
+/* -------------------- reviews - типографика : начало -------------------- */
+.reviews {
+	background-color: var(--content-bg-color-tell);
+	&__content {
+
+		h2 {
+			letter-spacing: 0.12em;
+			text-transform: none;
+
+			@include a-val-doorstep("font-size", 18, 14, 0);
+
+			@include bp(lg) {
+				font-size: rem(18);
+			}
+			i {
+				color: #848688;
+				font-weight: 300;
+				&:before {
+					content: "/";
+					margin-right: 0.5em;
+					margin-left: 0.2em;
+				}
+			}
+		}
+	}
+	p {
+		line-height: 1.45;
+		@include a-val-doorstep("font-size", 24, 18, 0);
+		font-style: italic;
+		letter-spacing: -0.01em;
+
+		@include bp(lg) {
+			font-size: rem(24);
+		}
+	}
+}
+/* -------------------- reviews - типографика : конец -------------------- */

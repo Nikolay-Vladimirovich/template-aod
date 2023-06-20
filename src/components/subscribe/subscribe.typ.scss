@@ -1,0 +1,28 @@
+/* -------------------- subscribe - типография : начало -------------------- */
+.subscribe {
+	background: var(--content-bg-color-default);
+	.subscribe__intro {
+		.subscribe__logo {
+			img {
+				display: block;
+				object-fit: cover;
+				aspect-ratio: 94/85;
+			}
+		}
+		.subscribe__slogan {
+			color: #848688;
+			font-style: italic;
+			font-weight: normal;
+			letter-spacing: -0.008em;
+			@include a-val-doorstep("font-size", 24, 18);
+
+			@include bp(md) {
+				// padding-top: 32px;
+			}
+		}
+	}
+	.subscribe__form {
+		border: none;
+	}
+}
+/* -------------------- subscribe - типография : конец -------------------- */

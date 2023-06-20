@@ -1,0 +1,163 @@
+@use "sass:math";
+@import "../../template/tmpl.commons/adaptive/init";
+@import "../../template/layout.config";
+
+@mixin dev-mixin-outlines {
+	outline: 1px solid #000;
+	& > * {
+		outline: 1px dashed #f00;
+		& > * {
+			outline: 1px dashed #0f0;
+			& > * {
+				outline: 1px solid #f80;
+				& > * {
+					outline: 1px solid #888;
+					& > * {
+						outline: 1px dotted #666;
+						& > * {
+							outline: 1px dotted #f0f;
+							& > * {
+								outline: 1px dotted #000;
+								& > * {
+									outline: 1px dotted #777;
+									& * {
+										outline: dotted 1px #ccc;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	& *::before {
+		outline: 1px solid aqua;
+	}
+	& *::after {
+		outline: 1px solid pink;
+	}
+}
+
+.dev--overlayed-fullpage {
+	position: relative;
+	&:before {
+		top: 0;
+		left: 0;
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 1000;
+		opacity: 0.5;
+		width: 100%;
+		height: 4991px;
+		background: transparent url("@img/full.jpg") no-repeat 50% 0;
+		background-size: cover;
+	}
+}
+.dev--overlayed-no-header {
+	&:before {
+		top: -800px;
+	}
+}
+.dev--containers-highlighted {
+	& .component-container {
+		background-color: #f8f;
+	}
+	& .content-container {
+		background-color: #8ff;
+	}
+	& [class*="__layout"] {
+		background-color: #f80;
+	}
+}
+.dev--outlined {
+	.intro,
+	.navbar,
+	.about,
+	.work,
+	.reviews,
+	.shop,
+	.subscribe,
+	.footer {
+		@include dev-mixin-outlines;
+	}
+}
+.dev--js-ext-outlined {
+	.swiper {
+		@include dev-mixin-outlines;
+
+		& [class*="__content"] {
+			& *,
+			& *:before,
+			& *:after {
+				outline: 0 !important;
+			}
+		}
+	}
+}
+.dev--overlayed {
+	.menu,
+	.about,
+	.reviews,
+	.work:nth-child(1),
+	.discover,
+	.subscribe,
+	.page-footer {
+		position: relative;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			opacity: 0.5;
+			width: 100%;
+		}
+	}
+
+	.menu {
+		position: relative;
+		&:before {
+			height: 85px;
+			background: transparent url("@img/mainmenu.png") no-repeat 50% 0;
+		}
+	}
+	.about {
+		&:before {
+			height: 469px;
+			background: transparent url("@img/section_about.png") no-repeat 50% 0;
+		}
+	}
+	.reviews {
+		&:before {
+			height: 469px;
+			background: transparent url("@img/section_reviews.png") no-repeat 50% 0;
+		}
+	}
+	.work:nth-child(1) {
+		&:before {
+			height: 600px;
+			background: transparent url("@img/bike_02.jpg") no-repeat 100% 0;
+		}
+	}
+	.discover {
+		&:before {
+			height: 200px;
+			background: transparent url("@img/section_discover.png") no-repeat 50% 0;
+		}
+	}
+	.subscribe {
+		&:before {
+			height: 469px;
+			background: transparent url("@img/section_subscribe.png") no-repeat 50% 0;
+		}
+	}
+	.page-footer {
+		&:before {
+			height: 250px;
+			background: transparent url("@img/footer.png") no-repeat 50% 0;
+		}
+	}
+}

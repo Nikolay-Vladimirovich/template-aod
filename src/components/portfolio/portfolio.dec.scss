@@ -1,0 +1,63 @@
+/* -------------------- portfolio - декоративные стили : начало -------------------- */
+.portfolio {
+	/* ----- Разделители (сверху с снизу у блока portfolio) : начало ----- */
+	position: relative; // ! Обязательно position: relative
+	padding-top: rem(25);
+	padding-bottom: rem(25);
+	&:before,
+	&:after {
+		position: absolute; // ! Обязательно position: absolute
+		content: "";
+		display: block;
+		height: 1px;
+		width: 92%;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #d7d8d8;
+	}
+	&:before {
+		top: 12px;
+	}
+	&:after {
+		bottom: 12px;
+	}
+	@include bp(sm) {
+		// Прячем разделители на MD-экранах
+		padding-top: rem(0);
+		padding-bottom: rem(0);
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+	/* ----- Разделители (сверху с снизу у блока portfolio) : конец ----- */
+}
+.work {
+	/* ----- Разделители (между блоками work) : начало ----- */
+	position: relative; // ! Обязательно position: relative
+	&:not(:last-child) {
+		padding-bottom: rem(17);
+		&:after {
+			content: "";
+			display: block;
+			height: 1px;
+			width: 66%;
+			background: #d7d8d8;
+			position: absolute; // ! Обязательно position: absolute
+			bottom: 8px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	@include bp(sm) {
+		// Прячем разделители на MD-экранах
+		&:not(:last-child) {
+			padding-bottom: 0;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	/* ----- Вертикальный разделители (между блоками work) : конец ----- */
+}
+/* -------------------- portfolio - декоративные стили : конец -------------------- */

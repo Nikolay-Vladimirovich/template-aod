@@ -1,0 +1,121 @@
+/* ==============================
+Анимации 2го уровня : начало
+============================== */
+/* ------------------------------
+Анимации в блоке mainmenu : начало
+------------------------------ */
+.mainmenu {
+	& > a {
+		& > span {
+			transition-property: text-shadow, color, padding-bottom;
+			transition-duration: 0.2s;
+			transition-delay: 0.05s;
+
+			position: relative;
+
+			&:after {
+				transition-property: width;
+				transition-duration: 0.2s;
+				transition-delay: 0.1s;
+				box-shadow: 0 0 6px #4d4a59;
+			}
+			&:before {
+				content: "";
+				font-size: 0;
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				// margin-left: -100%;
+
+				// background: transparent;
+				// border: 1px solid #f00;
+				// transform: translate(-50%, 0);
+				/*  */
+				background: url("@assets/img/icon-bicycle.png") no-repeat 0 0 / contain;
+				/*  */
+				width: 26px;
+				height: 15px;
+				opacity: 0;
+				transform: scale(0);
+				transition: opacity, transform 0.3s, 0.3s;
+				transition-delay: 0.05s;
+				// height: 0;
+				// border: 1px solid #f00;
+
+				// transform: rotateY(90deg);
+				//filter: invert(100%);
+			}
+		}
+
+		&:hover > span {
+			padding-bottom: rem(18);
+			
+			&:after {
+				width: 100%;
+			}
+			&:before {
+				opacity: 1;
+				transform: scale(1);
+				animation: bicycle-drive 2s ease 0.3s infinite, bicycle-turn 2s linear 0.3s infinite;
+				// animation-fill-mode: forwards;
+
+				// transition-delay: 1s;
+				&:hover {
+					
+				}
+			}
+			& > span:before:hover {
+				animation-play-state: paused;
+			}
+		}
+	}
+}
+/* ------------------------------
+Анимации в блоке mainmenu : конец
+------------------------------ */
+/* ==============================
+Анимации 2го уровня : конец
+============================== */
+/* ==============================
+Keyframes 2го уровня : начало
+============================== */
+@keyframes bicycle-drive {
+	0% {
+		left: 0;
+		// transform: rotateY(0)
+	}
+	25% {
+	}
+	50% {
+		left: calc(100% - 26px);
+	}
+
+	75% {
+		// left: 90%;
+	}
+	100% {
+		left: 0;
+		// transform: rotateY(180deg)
+	}
+}
+@keyframes bicycle-turn {
+	0% {
+		transform: rotateY(0)
+	}
+	40% {
+		transform: rotateY(0)
+	}
+	50% {
+		transform: rotateY(180deg)
+	}
+	90% {
+		transform: rotateY(180deg)
+	}
+	100% {
+		transform: rotateY(0)
+	}
+}
+/* ==============================
+Keyframes 2го уровня : конец
+============================== */

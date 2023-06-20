@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', { "title": "Главная" })
+
+<body>
+	<header class="page-header">
+		@@include('html/components/menu.html', {})
+		@@include('html/components/intro.html', {})
+	</header>
+
+	<main class="page-main">
+		@@include('html/components/about.html', {})
+		@@include('html/components/portfolio.html', {})
+		@@include('html/components/reviews.html', {})
+		@@include('html/components/shop.html', {})
+		@@include('html/components/subscribe.html', {})
+	</main>
+
+	<footer class="page-footer">
+		@@include('html/footer.html', {})
+	</footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* ---------- plain sight (место посадки для элементов, которые всегда на виду) : начало ---------- */
+.plainsight-wrap {
+	position: absolute;
+	inset: auto 0;
+	z-index: 1;
+	width: 100%;
+	transition-property: opacity;
+	transition-duration: var(--simple-transition-duration);
+	// @include a-padd-l(18);
+}
+.plainsight {
+	position: relative;
+	display: flex;
+	// justify-content: center;
+	@include content-paddings;
+	opacity: 0;
+	&.is-visible {
+		opacity: 1;
+	}
+	@include bp($menu-adaptive-bp-1) {
+		justify-content: center;
+	}
+	@include bp($menu-adaptive-bp-2) {
+		&.is-visible {
+			opacity: 0;
+		}
+	}
+}
+/* ---------- plain sight : конец ---------- */

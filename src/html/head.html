@@ -1,0 +1,48 @@
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Видеонаблюдение, системы видеонаблюдения, видеонаблюдения для дома, , видеонаблюдения для бизнеса">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	@@if (dubiousMeta) {
+	<meta name="format-detection" content="telephone=no">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="MobileOptimized" content="width">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	}
+	<title>@@title</title>
+	<link rel="icon" href="favicon/favicon.svg">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="manifest" href="manifest.json">
+	<!-- На локальном хосте из-за этой строки (с подключением manifest.json) в консоли будут лишние ошибки-предупреждения. -->
+	<!-- При загрузке на хостинг эту строку можно раскомментировать. Тогда favicon будет более кроссплатформенным. -->
+	@@if (hasScssExtensions) {
+	<link rel="stylesheet" href="css/extensions/extensions.min.css">}
+	@@if (needCSSMin) {
+	<link rel="stylesheet" href="css/style.min.css">}
+	@@if (!needCSSMin) {
+	<link rel="stylesheet" href="css/style.css">}
+	@@if (isMultipleColorScheme) {
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8faff">
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#5c5c5a">
+	<script>
+		if (matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+			document.documentElement.style.display = 'none';
+			document.head.insertAdjacentHTML(
+				'beforeend',
+				'<link rel="stylesheet" href="css/color-scheme-light.min.css" onload="document.documentElement.style.display=\'\'">'
+			);
+		}
+	</script>
+	<link rel="stylesheet" href="css/color-scheme-light.min.css" media="(prefers-color-scheme: light)">
+	<link rel="stylesheet" href="css/color-scheme-dark.min.css" media="(prefers-color-scheme: dark)">
+	}
+	@@if (hasJSExtensions) {
+	<script defer src="js/extensions_app/extensions.app.min.js"></script>}
+	@@if (needJSMin) {
+	<script defer src="js/app.min.js"></script>}
+	@@if (!needJSMin) {
+	<script defer src="js/app.js"></script>}
+	@@if (isDevUtilsEnable) { @@include('../dev-utils/head.html') }
+	@@if (isDevUtilsEnable) { @@include('../dev-utils/devscripts.html') }
+</head>

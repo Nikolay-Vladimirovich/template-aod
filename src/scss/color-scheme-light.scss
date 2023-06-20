@@ -1,0 +1,46 @@
+/* Светлая тема : начало */
+:root {
+	--swiper-pagination-color: #a9aeb1;
+
+	--outline-color: rgb(214, 161, 82);
+	--links-outline-color: rgb(241, 129, 0);
+
+	// Цвета основных элементов типографии
+	--main-font-color: #848688;
+	--font-color-error: rgb(189, 55, 55);
+	--font-color-success: rgb(33, 180, 111);
+	--links-font-color: var(--main-font-color);
+	
+	--headings-font-color: #38393b;
+	--h2-font-color: var(--headings-font-color);
+
+	--menu-links-font-color: #86c19e;
+	--menu-links-active-font-color: #44835d;
+	--menu-outline-color: #86c19e;
+	--burger-bg-color: #fff4;
+	--burger-border-color: #86c19e;
+	--burger-lines-color: #86c19e;
+	--burger-text-color: #86c19e;
+	// Цвета фона крупных блоков
+	--content-bg-color-default: #fff;
+	--content-bg-color-tell: #f7f7f7;
+	--footer-bg-color: var(--content-bg-color-tell);
+
+	// Цвета в reviews (блок с отзывами)
+	--fld-bg-color: #fff;
+	--fld-border-color: #d3d6d8;
+	--fld-font-color: #919191;
+	
+	--btn-submit-bg-color: #86c19e;
+	--btn-submit-border-color: #d3d6d8;
+	--btn-submit-font-color: #fff;
+
+	// Цвета в shop
+	--shop-overlay-bg-color: #86c19e; // Зеленый фон при наведении на изображение продукта
+	--shop-discover-bg-color: #2e3338;
+	
+	--btn-discover-font-color: #fff;
+	--btn-discover-bg-color: transparent;
+	--btn-discover-border-color: #fff;
+}
+/* Светлая тема: конец */

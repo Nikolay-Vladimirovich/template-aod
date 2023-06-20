@@ -1,0 +1,11 @@
+_files
+
+node_modules
+archive
+
+dist
+prod
+src/learn*
+src/stack
+src/generated_svg
+gulp/version.json

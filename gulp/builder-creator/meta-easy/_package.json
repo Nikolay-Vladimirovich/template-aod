@@ -1,0 +1,44 @@
+{
+	"name": "gulp-builder-easy",
+	"version": "0.0.1",
+	"description": "Простой сборщик для проекта CCTV",
+	"main": "gulpfile.js",
+	"type": "module",
+	"scripts": {
+		"build": "gulp"
+	},
+	"author": {
+		"name": "Yanovskiy Nikolay",
+		"url": "https://www.yanovskiynv.store/mycontacts"
+	},
+	"license": "ISC",
+	"browserslist": [
+		"last 20 versions",
+		"safari >= 10"
+	],
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "latest",
+		"@babel/preset-env": "latest",
+		"babel-loader": "latest",
+		"gulp": "latest",
+		"del": "latest",
+		"gulp-notify": "latest",
+		"gulp-plumber": "latest",
+		"gulp-regex-rename": "latest",
+		"gulp-rename": "latest",
+		"gulp-size": "latest",
+		"webpack": "latest",
+		"webpack-stream": "latest",
+		"gulp-clean-css": "latest"
+	},
+	"dependencies": {
+		"@popperjs/core": "latest",
+		"imask": "latest",
+		"swiper": "latest"
+	}
+}

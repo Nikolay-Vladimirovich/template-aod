@@ -1,0 +1,24 @@
+@mixin row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: rem(-$grid-gap-side);
+	margin-right: rem(-$grid-gap-side);
+	> * {
+		width: 100%;
+		max-width: 100%;
+		margin-left: rem($grid-gap-side);
+		margin-right: rem($grid-gap-side);
+	}
+}
+@mixin col($size) {
+	flex: 0 0 auto;
+	width: calc(#{percentage(math.div($size, $grid-columns))} - #{$grid-gap});
+}
+
+@mixin grid-container {
+	margin: 0 auto;
+	min-width: rem($grid-min-width);
+	max-width: rem($grid-max-width); // ! ширина контента
+	padding-left: $grid-gap-side;
+	padding-right: $grid-gap-side;
+}

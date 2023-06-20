@@ -1,0 +1,20 @@
+/* -------------------- about - pixel perfect : начало -------------------- */
+
+.about {
+	.icon-box {
+		@include a-marg-r(36, 0, inside);
+		@include bp(ceil) {
+			margin-right: rem(36);
+		}
+	}
+	h2 {
+		padding-left: 2px;
+
+		@include a-marg-r(36, 0, inside);
+		@include bp(ceil) {
+			margin-right: rem(36);
+		}
+	}
+}
+
+/* -------------------- about - pixel perfect : конец -------------------- */

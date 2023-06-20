@@ -1,0 +1,44 @@
+
+@include bp(ceil) {
+	/* -------------------- portfolio - pixel perfect : начало -------------------- */
+	.work.work--pix-1 {
+		.work__content {
+			// @include a-marg-t(11);
+			margin-top: rem(14);
+			.icon-box {
+				// @include a-marg-b(10);
+				margin-bottom: rem(10);
+			}
+			.title {
+				margin-left: rem(2);
+			}
+		}
+	}
+	.work.work--pix-2 {
+		.work__content {
+			// @include a-marg-t(3);
+			margin-bottom: rem(3);
+			.icon-box {
+				// @include a-marg-b(6);
+				margin-bottom: rem(6);
+			}
+		}
+	}
+	.work.work--pix-3 {
+		.work__content {
+			margin-bottom: rem(3);
+			.icon-box {
+				margin-left: rem(4);
+			}
+			.title {
+				margin-left: rem(4);
+				margin-bottom: rem(1);
+				letter-spacing: 0.187em;
+			}
+			p {
+				line-height: 1.9em;
+			}
+		}
+	}
+	/* -------------------- portfolio - pixel perfect : конец -------------------- */
+}

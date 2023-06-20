@@ -1,0 +1,77 @@
+/* -------------------- shop - позиционирование : начало -------------------- */
+.shop {
+	.discover {
+		@include content-paddings;
+
+		min-height: 200px;
+		@include a-val-doorstep("min-height", 200, 0, inside, xs, lg);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.btn--discover {
+			width: auto;
+			@include bp(md) {
+				// width: 300px;
+			}
+
+			margin-left: 0;
+		}
+	}
+	.shop__grid {
+		display: grid;
+
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+
+		grid-template-areas:
+			"product-1 product-2 product-4"
+			"product-3 product-3 product-4"
+			"product-5 product-6 product-6"
+			"product-5 product-7 product-8";
+
+		@include bp(sm) {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+
+			grid-template-areas:
+				"product-1 product-2 product-4 product-5"
+				"product-3 product-3 product-4 product-5"
+				"product-7 product-8 product-6 product-6";
+		}
+
+		@include bp(lg) {
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+
+			grid-template-areas:
+				"product-1 product-2 product-4 product-5 product-6 product-6"
+				"product-3 product-3 product-4 product-5 product-7 product-8";
+		}
+	}
+
+	.product-1 {
+		grid-area: product-1;
+	}
+	.product-2 {
+		grid-area: product-2;
+	}
+	.product-3 {
+		grid-area: product-3;
+	}
+	.product-4 {
+		grid-area: product-4;
+	}
+	.product-5 {
+		grid-area: product-5;
+	}
+	.product-6 {
+		grid-area: product-6;
+	}
+	.product-7 {
+		grid-area: product-7;
+	}
+	.product-8 {
+		grid-area: product-8;
+	}
+}
+/* -------------------- shop - позиционирование : конец -------------------- */

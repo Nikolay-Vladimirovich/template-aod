@@ -1,0 +1,33 @@
+/* ============================== menu : начало ============================== */
+$menu-items-amount-max: 6 !default;
+$menu-items-amount: 4 !default;
+$logo-order: math.floor(math.div($menu-items-amount, 2)) + 1 !default;
+$before-logo-order: $logo-order - 1 !default;
+$after-logo-order: $logo-order !default;
+
+$menu-padding-t: 35px !default;
+$menu-padding-b: 35px !default;
+$menu-content-height: 85px !default;
+$menu-bottom-smooth: 15px !default;
+$menu-summary-height: ($menu-content-height + $menu-padding-t + $menu-padding-b + $menu-bottom-smooth);
+$menu-mask-point-1: calc(100% - $menu-bottom-smooth);
+$menu-mask-point-2: 100%;
+
+
+$scrollbar-width-different: 0;
+$scrollbar-width-different-px: $scrollbar-width-different + px;
+
+
+@import "burger";
+@import "plainsight";
+@import "decor-nav";
+
+@import "navbar";
+@import "nav";
+
+@import "menu.typ";
+@import "menu.lay";
+@import "menu.ani";
+
+// @import "menu-content-layout";
+/* ============================== menu : конец ============================== */

@@ -1,0 +1,21 @@
+/* ---------- nav : начало ---------- */
+.nav {
+	@include content-paddings-h;
+	@include content-margins-h;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include bp($menu-adaptive-bp-1) {
+		height: auto;
+	}
+	@include bp($menu-adaptive-bp-2) {
+		padding: 0;
+		margin: 0;
+		padding-right: 14px;
+	}
+}
+/* ---------- nav : конец ---------- */
