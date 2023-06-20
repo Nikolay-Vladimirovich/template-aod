@@ -21,6 +21,8 @@ const jsMainSourceFiles = [
 	`${srcFolder}/js/app.js`,
 ];
 
+const imrTempFolder = `${srcFolder}/assets/generated-responsive-img/`;
+
 export const path = {
 	build: {
 		devutils: {
@@ -44,7 +46,7 @@ export const path = {
 		imagesResponsive: `${buildFolder}/imr/`,
 	},
 	temp: {
-		imagesResponsive: `${srcFolder}/imr/`,
+		imagesResponsive: imrTempFolder,
 	},
 	src: {
 		devutils: {
@@ -76,7 +78,7 @@ export const path = {
 		html: `${srcFolder}/*.html`,
 		// html:  `${srcFolder}/*.pug`,
 		images: `${srcFolder}/assets/img/**/*.{jpg,jpeg,png,gif,webp,avif}`,
-		imagesResponsive: `${srcFolder}/imr/**/*.{jpg,jpeg,png,gif,webp,avif}`,
+		imagesResponsive: `${imrTempFolder}/**/*.{jpg,jpeg,png,gif,webp,avif}`,
 		sprites: `${srcFolder}/sprites_src/other/*.{jpg,jpeg,png,webp,avif}`,
 		svgsprites: `${srcFolder}/sprites_src/svg/*.svg`,
 		svg: `${srcFolder}/assets/img/**/*.svg`,
@@ -125,7 +127,7 @@ export const path = {
 		cssExt: `${buildFolder}/css/extensions/**/*.css`,
 		html: `${buildFolder}/*.html`,
 		images: `${buildFolder}/{img,img/content}/**/*.*`,
-		imagesResponsive: [`${srcFolder}/imr/`, `${buildFolder}/imr/`],
+		imagesResponsive: [`${srcFolder}/assets/imr/`, `${buildFolder}/imr/`],
 		sprites: [`${srcFolder}/img/sprite.png`, `${srcFolder}/scss/sprites/sprite.scss`],
 		svgsprites: `${buildFolder}/img/svgsprites/`,
 		fonts: `${buildFolder}/fonts/`,
