@@ -21,7 +21,7 @@
 	@return $res;
 }
 @function bp-val($name) {
-	$width: map-get($grid-breakpoints, $name);
+	$width: map-get($tmpl-breakpoints, $name);
 	@return $width;
 }
 
@@ -44,6 +44,6 @@
 // 		 }
 // 	  }
 // 	}
- 
+
 // 	@return $string;
 //  }

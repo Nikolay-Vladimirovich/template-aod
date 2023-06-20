@@ -16,15 +16,15 @@
 }
 
 @mixin bp($name) {
-	$width: map-get($grid-breakpoints, $name);
+	$width: map-get($tmpl-breakpoints, $name);
 	@include media($width) {
 		@content;
 	}
 }
 
 @mixin bp-in($bp-start, $bp-end) {
-	$width-start: map-get($grid-breakpoints, $bp-start);
-	$width-end: map-get($grid-breakpoints, $bp-end);
+	$width-start: map-get($tmpl-breakpoints, $bp-start);
+	$width-end: map-get($tmpl-breakpoints, $bp-end);
 	@include media-min-and-max($width-start, $width-end) {
 		@content;
 	}
@@ -42,9 +42,9 @@ $global-doorstep-default: ceil !default; // Самая большая ширин
 	$type: 0,
 	$doorstep: 0,
 	$doorstep-end: 0,
-	// adaptive/_variables.scss --> $grid-breakpoints значения массива
-	$page-width-min: $container-min-width,
-	$page-width-max: $container-design-width
+	// adaptive/_variables.scss --> $tmpl-breakpoints значения массива
+	$page-width-min: $tmpl-min-width,
+	$page-width-max: $tmpl-design-width
 ) {
 	$units: px;
 	$add-size: $initial-size - $final-size;
